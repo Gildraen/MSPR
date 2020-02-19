@@ -1,10 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 public class shareAction : MonoBehaviour
 {
+
     private void test() {
         Texture2D ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
@@ -56,6 +56,33 @@ public class shareAction : MonoBehaviour
         */
         StartCoroutine(TakeSSAndShare());
     }
+    /*int i = 0;
+    void Update() {
+        int width = Screen.width;
+        int height = Screen.height;
+        Vector3 pos = _button.transform.position;
+        if (Screen.orientation == ScreenOrientation.LandscapeLeft) {
+            pos.x = (width / 2) - _button.GetComponent<RectTransform>().rect.width - 20;
+            pos.y = _button.GetComponent<RectTransform>().rect.height + 10 - (height / 2);
+        }else {
+            pos.y = (width / 2) - _button.GetComponent<RectTransform>().rect.width - 20;
+            pos.x = _button.GetComponent<RectTransform>().rect.height + 10 - (height / 2);
 
-    
+        }
+        if (i == 0) {
+            Debug.Log("Screen w" + width);
+            Debug.Log("Screen h" + height);
+            Debug.Log(pos.x);
+            Debug.Log(pos.y);
+            i++;
+
+        }
+        _button.transform.position = pos;
+
+    }
+
+    void Start() {
+        _button = GameObject.Find("Button").GetComponent<Button>();
+    }
+    */
 }
